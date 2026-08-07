@@ -1,9 +1,15 @@
 import sqlite3
+import os
 
+DATABASE = "memory.db"
 
 DATABASE = "database/memory.db"
 
 
+os.makedirs(
+    "database",
+    exist_ok=True
+)
 # ==========================================================
 # DATABASE CONNECTION
 # ==========================================================
@@ -11,13 +17,13 @@ DATABASE = "database/memory.db"
 def get_connection():
 
     conn = sqlite3.connect(
-        DATABASE
+        DATABASE,
+        check_same_thread=False
     )
 
     conn.row_factory = sqlite3.Row
 
     return conn
-
 
 
 # ==========================================================
