@@ -1,0 +1,12 @@
+streamlit
+groq
+python-dotenv
+bcrypt
+pypdf
+python-docx
+openpyxl
+chromadb
+sentence-transformers
+reportlab
+SpeechRecognition
+pyttsx3
